@@ -1,5 +1,5 @@
 
-const questions = [
+export const quizQuestion = [
     {
         question: "What will be the output of typeof null?",
         options: ["null", "undefined", "object", "number"],
