@@ -1,27 +1,27 @@
-// Importing my data.js
-import {quizQuestion} from "./data/data.js";
+import { quizQuestion } from "./data/data.js";
 
-// Initialization Of JavaScript
+console.log("JavaScript connected!");
+console.log(quizQuestion);
 
-const answerElement = document.querySelectorAll(".answer");
-const [questionElement, option_1, option_2, option_3, option_4] =
-  document.querySelectorAll(
-    "#question, .option-1, .option-2, .option-3, .option-4",
-  );
+const questionElement = document.querySelector("#question");
 
-const btn = document.getElementById("btn")
+const optionElements = [
+    document.querySelector(".option-1"),
+    document.querySelector(".option-2"),
+    document.querySelector(".option-3"),
+    document.querySelector(".option-4")
+];
 
-const currentQuiz = 0;
+let currentQuiz = 0;
 
-const  score = 0;
-
-// Loading The Quiz Functions
-// Questions
-
-let loadQues = () => {
+function loadQues() {
     const ques = quizQuestion[currentQuiz];
 
     questionElement.innerText = ques.question;
+
+    ques.options.forEach((option, index) => {
+        optionElements[index].innerHTML = option;
+    });
 }
 
 loadQues();
