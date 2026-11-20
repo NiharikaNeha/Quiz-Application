@@ -93,10 +93,54 @@
 
     /* Radio Button */
     .answer {
-        width: 18px;
-        height: 18px;
-        accent-color: #7c3aed;
-    }
+    display: none;
+}
+
+.answer + label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding-left: 48px;
+    cursor: pointer;
+    color: #654481;
+}
+
+/* Lavender circle */
+.answer + label::before {
+    content: "✓";
+    position: absolute;
+    left: 6px;
+    bottom: 0;
+    width: 29px;
+    height: 29px;
+    border: 2px solid #b58add;
+    border-radius: 50%;
+    background: #f4eaff;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Small teddy bear */
+.answer + label::after {
+    content: "🧸";
+    position: absolute;
+    left: 5px;
+    bottom: 19px;
+    font-size: 25px;
+    z-index: 1;
+}
+
+/* Selected state */
+.answer:checked + label::before {
+    background: #a879d6;
+    color: white;
+    border-color: #8754b5;
+}
 
     /* Option Text */
     label {
