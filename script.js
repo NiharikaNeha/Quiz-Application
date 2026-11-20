@@ -21,8 +21,6 @@ const  score = 0;
 let loadQues = () => {
     const ques = quizQuestion[currentQuiz];
 
-    console.log(ques);
-
     questionElement.innerText = ques.question;
 }
 
