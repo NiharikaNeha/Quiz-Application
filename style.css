@@ -45,11 +45,19 @@ body {
 }
 
 /* Question */
+#heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: #4c1d95;
+    margin-bottom: 18px;
+    line-height: 1;
+}
+
 .question {
     font-size: 23px;
     font-weight: 700;
     color: #4c1d95;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     line-height: 1;
 }
 
