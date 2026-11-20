@@ -125,7 +125,7 @@ button,
 label,
 li,
 input {
-    cursor: url("./images/cute-character-cursor.png") 4 4, pointer;
+    cursor: url("./images/cute-character-cursor.png") 4 4;
 }
 
 /* Responsive Design */
